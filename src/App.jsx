@@ -95,8 +95,23 @@ export default function App() {
         Wall Calendar
       </p>
 
-      {/* Outer row: calendar card + projects sidebar */}
+      {/* Outer row: left tagline + calendar card + projects sidebar */}
       <div className="flex flex-col xl:flex-row items-start gap-6 w-full max-w-[520px] xl:max-w-none xl:w-fit xl:mx-auto">
+
+        {/* ── Left tagline ── */}
+        <div className="hidden xl:flex flex-col justify-center self-center w-[180px] shrink-0">
+          <p className="font-heading text-[26px] font-black text-text-primary leading-tight">
+            Forward You<br />Take me . < br />menha ha lol :)
+          </p>
+          <a
+            href="https://prik.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[14px] font-semibold text-blue hover:underline tracking-wide mt-1"
+          >
+            prik.dev
+          </a>
+        </div>
 
         {/* ── Calendar card ── */}
         <div className="relative w-full xl:w-[860px] shrink-0 bg-paper rounded-[20px] shadow-xl [overflow:clip]">
@@ -130,9 +145,6 @@ export default function App() {
 
         {/* ── Projects sidebar ── */}
         <aside className="w-full xl:w-[220px] shrink-0 flex flex-col gap-3">
-          <p className="text-[10px] font-semibold tracking-[2px] uppercase text-gray-400 mb-1">
-            Also by me
-          </p>
           {PROJECTS.map(p => (
             <a
               key={p.url}
