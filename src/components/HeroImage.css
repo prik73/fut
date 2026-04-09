@@ -1,0 +1,31 @@
+/*
+  Single blue overlay — clip-path carves its TOP edge into a W shape.
+  The photo sits behind; it shows through the gap in the overlay.
+
+  Overlay coordinate system (0,0 = top-left of the overlay div):
+    x grows right, y grows down
+
+  Gap position: 75% from left (25% from right)
+  Gap style: flat top (not pointed) — a horizontal segment at y=16%
+
+  W-cut points, left → right:
+    (0%,   0%)   full-height left edge
+    (66%,  56%)  left peak  — deepest point before gap
+    (71%,  16%)  gap left   — rises sharply toward top
+    (77%,  16%)  gap right  — FLAT segment (makes it "not pointed")
+    (82%,  56%)  right peak — drops back down
+    (100%, 0%)   full-height right edge
+    then close the rectangle: (100%,100%) → (0%,100%)
+*/
+.clip-hero-overlay {
+  clip-path: polygon(
+    0%    0%,
+    66%   56%,
+    71%   16%,
+    77%   16%,
+    82%   56%,
+    100%  0%,
+    100%  100%,
+    0%    100%
+  );
+}
