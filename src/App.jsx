@@ -39,7 +39,7 @@ const PROJECTS = [
     url: 'https://heat.prik.dev',
     name: 'heat.prik.dev',
     tag: 'The laptop heater',
-    desc: 'Intentionally burns CPU cycles. Your MacBook will thank you in winter.',
+    desc: `Intentionally burns CPU cycles, to fight delhi's weather.`,
   },
   {
     url: 'https://clic.prik.dev',
