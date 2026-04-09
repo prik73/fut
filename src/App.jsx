@@ -145,6 +145,9 @@ export default function App() {
 
         {/* ── Projects sidebar ── */}
         <aside className="w-full xl:w-[220px] shrink-0 flex flex-col gap-3">
+          <p className="font-heading text-[18px] font-black text-text-primary mb-1">
+            Also by me
+          </p>
           {PROJECTS.map(p => (
             <a
               key={p.url}
